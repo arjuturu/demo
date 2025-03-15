@@ -1,0 +1,9 @@
+#mongodb+srv://arjuturu:<db_password>@cluster0.nfnjp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+spring:
+  application:
+    name: demo
+  data:
+    mongodb:
+      uri: mongodb+srv://arjuturu:soCy61ziThnl4osW@cluster0.nfnjp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: test
