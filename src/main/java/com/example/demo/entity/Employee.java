@@ -1,3 +1,4 @@
+/*
 package com.example.demo.entity;
 
 import lombok.Getter;
@@ -15,3 +16,4 @@ public class Employee {
     private String name;
 
 }
+*/
