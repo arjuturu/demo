@@ -1,33 +1,7 @@
-#mongodb+srv://arjuturu:<db_password>@cluster0.nfnjp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-
 spring:
-  application:
-    name: demo
   cloud:
     azure:
       cosmos:
-        database: demo1
-        endpoint: ${cosmosdb-url}
-        key: EM5C2IamIZOJsOt8NnpUWhkAehYxrudLDhhFMRabTS5rN5794qJt6fIUnLmowrerNyDpTqb65KAUACDbn63MNg==
-
-      keyvault:
-        secret:
-          property-sources[0]:
-            endpoint: https://arjuturu-keyvalut.vault.azure.net/
-      eventhubs:
-        namespace: arjuturu-ehub
-        event-hub-name: arjuturu-topic
-        processor:
-          checkpoint-store:
-            account-name: arjuturusame
-            container-name: arjuturucname
-          consumer-group: $Default
-
-  kafka:
-    bootstrap-servers: arjuturu-;;ehub.servicebus.windows.net:9093
-    consumer:
-      group-id: $Default
-
-    security:
-      protocol: SASL_SSL
-    passw
+        key: Bh9yMoedWBsbnAgKA1gCoCmaRsjRQF68KkzWmcYzMqMiRYyNEB21Uv0Lmu9sjXav1ykDdEUtMvrbACDb4BMj8w==
+        endpoint: https://mentalhealth-cosmosdb.documents.azure.com:443/
+        database: mental-health
