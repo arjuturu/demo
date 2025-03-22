@@ -8,13 +8,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/")
 public class UserController {
 
     @Autowired
     private UserService userService;
 
-    @PostMapping("customer-profile")
+    @PostMapping("/customer-profile")
     public ResponseEntity<CustomerProfile> saveCustomerProfile(@RequestBody CustomerProfile customerProfile) {
         CustomerProfile profile = null;
         try {
