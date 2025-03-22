@@ -1,12 +1,11 @@
-/*
 package com.example.demo.entity;
 
+import com.azure.spring.data.cosmos.core.mapping.Container;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collation = "employee")
+@Container(containerName = "employee")
 @Getter
 @Setter
 public class Employee {
@@ -16,4 +15,3 @@ public class Employee {
     private String name;
 
 }
-*/

@@ -3,8 +3,31 @@
 spring:
   application:
     name: demo
-  data:
-    mongodb:
-      uri: mongodb+srv://arjuturu:soCy61ziThnl4osW@cluster0.nfnjp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-      database: test
+  cloud:
+    azure:
+      cosmos:
+        database: demo1
+        endpoint: ${cosmosdb-url}
+        key: EM5C2IamIZOJsOt8NnpUWhkAehYxrudLDhhFMRabTS5rN5794qJt6fIUnLmowrerNyDpTqb65KAUACDbn63MNg==
+
+      keyvault:
+        secret:
+          property-sources[0]:
+            endpoint: https://arjuturu-keyvalut.vault.azure.net/
+      eventhubs:
+        namespace: arjuturu-ehub
+        event-hub-name: arjuturu-topic
+        processor:
+          checkpoint-store:
+            account-name: arjuturusame
+            container-name: arjuturucname
+          consumer-group: $Default
+
   kafka:
+    bootstrap-servers: arjuturu-;;ehub.servicebus.windows.net:9093
+    consumer:
+      group-id: $Default
+
+    security:
+      protocol: SASL_SSL
+    passw
